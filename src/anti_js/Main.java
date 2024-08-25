@@ -5,21 +5,18 @@ import arc.util.Log;
 import mindustry.Vars;
 import mindustry.content.Blocks;
 import mindustry.game.EventType;
-import mindustry.gen.Building;
 import mindustry.mod.*;
-import mindustry.net.Administration;
-import mindustry.world.Block;
 import mindustry.world.blocks.logic.MessageBlock;
 
 public class Main extends Plugin {
-    String banned_string = "runconsole(";
+    String bannedString = "runconsole(";
 
     void checkBlock(EventType.ConfigEvent blockUpdated) {
         if (blockUpdated.tile.block != Blocks.message) {
 //            Log.info("Configured block was not a message block.");
             return;
         }
-        if (!blockUpdated.value.toString().toLowerCase().contains(banned_string)) {
+        if (!blockUpdated.value.toString().toLowerCase().contains(bannedString)) {
 //            Log.info("Configured block did not contain malicious JS code.");
             return;
         }
@@ -33,7 +30,7 @@ public class Main extends Plugin {
         if (placedBlock.tile.block() != Blocks.message) {
             return;
         }
-        if (!((MessageBlock.MessageBuild) placedBlock.tile.build).message.toString().toLowerCase().contains(banned_string)) {
+        if (!((MessageBlock.MessageBuild) placedBlock.tile.build).message.toString().toLowerCase().contains(bannedString)) {
             return;
         }
 

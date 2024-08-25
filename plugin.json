@@ -3,5 +3,5 @@
   "author": "BnDLett",
   "main": "anti_js.Main",
   "description": "A plugin that prevents players from pasting malicious JS into a message block.",
-  "version": "0.0.1"
+  "version": "0.0.2"
 }
