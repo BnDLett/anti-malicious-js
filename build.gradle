@@ -37,7 +37,6 @@ dependencies{
     compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
     compileOnly "com.github.Anuken.Mindustry:core:$mindustryVersion"
     annotationProcessor "com.github.Anuken:jabel:$jabelVersion"
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.13.0'
 }
 
 jar{
